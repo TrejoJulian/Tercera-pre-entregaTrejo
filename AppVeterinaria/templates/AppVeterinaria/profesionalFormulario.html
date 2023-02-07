@@ -1,0 +1,23 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+
+Agregar un profesional
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <div class="d-flex justify-content-center">
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+    </div>
+    <input type="submit" value="Crear">
+</form>
+
+{% endblock %}

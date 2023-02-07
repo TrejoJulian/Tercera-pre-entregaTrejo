@@ -1,0 +1,24 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Visitas del paciente que contenga: {{ nombre_buscado }}
+{% endblock %}
+
+{% block contenido %}
+
+<div class="card-deck">
+    {% for visita in visitas %}
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Visita de: {{ visita.nombre_paciente }} con {{ visita.nombre_profesional }}</h5>
+          <p class="card-text">Fecha de visita: {{ visita.fecha_visita }}</p>
+          <p class="card-text">Diagnostico: {{ visita.diagnostico }}</p>
+        </div>
+    </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

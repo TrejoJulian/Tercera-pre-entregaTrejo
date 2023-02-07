@@ -1,0 +1,66 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+{% block nav %} 
+    <li class="nav-item"><a class="nav-link" href="#about">Profesionales</a></li>
+    <li class="nav-item"><a class="nav-link" href="#services">Pacientes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact">Visitas</a></li>
+{% endblock %}
+
+{% block titulo %}
+
+Bienvenido a App Veterinaria
+
+{% endblock %}
+
+{% block descripcion %}
+
+Aquí podrás almacenar y buscar información sobre profesionales, diversas mascotas y sus visitas medicas
+
+{% endblock %}
+
+{% block contenido %}
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Profesionales</h2>
+                        <p class="lead">En esta sección podrás conocer acerca de los varios profesionales con los que cuenta la aplicación!</p>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Profesionales' %}">Ver profesionales</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Buscar_Profesionales' %}">Buscar profesionales</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Agregar_Profesionales' %}">Agregar profesionales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Pacientes</h2>
+                        <p class="lead">En esta sección podrás conocer acerca de las mascotas registradas en la aplicación!</p>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Pacientes' %}">Ver pacientes</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Buscar_Pacientes' %}">Buscar pacientes</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Agregar_Pacientes' %}">Agregar pacientes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section id="contact">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Visitas</h2>
+                        <p class="lead">En esta sección podrás ver el registro de visitas de la aplicación!</p>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Visitas' %}">Ver visitas</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Buscar_Visitas' %}">Buscar visitas</a>
+                        <a class="btn btn-lg btn-primary" href="{% url 'Agregar_Visitas' %}">Agregar visitas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

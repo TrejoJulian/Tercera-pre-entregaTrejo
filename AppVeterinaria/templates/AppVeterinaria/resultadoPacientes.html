@@ -1,0 +1,28 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Pacientes con el nombre que contenga: {{ nombre_buscado }}
+{% endblock %}
+
+{% block contenido %}
+
+<div class="card-deck">
+    {% for paciente in pacientes %}
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ paciente.nombre }}</h5>
+          <p class="card-text">Especie: {{ paciente.especie }}</p>
+          <p class="card-text">Raza: {{ paciente.raza }}</p>
+          <p class="card-text">Fecha de nacimiento: {{ paciente.fecha_nacimiento }}</p>
+          <p class="card-text">Sexo: {{ paciente.sexo }}</p>
+          <p class="card-text">DNI del tutor: {{ paciente.dni_tutor }}</p>
+          <p class="card-text">Dirección: {{ paciente.direccion }}</p>
+        </div>
+    </div>
+
+  {% endfor %}
+</div>
+
+{% endblock %}

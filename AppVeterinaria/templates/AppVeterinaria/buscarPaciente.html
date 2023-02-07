@@ -1,0 +1,19 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+
+Busca pacientes por su nombre
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="/AppVeterinaria/resultadoPacientes" method="GET">
+    <input type="text" name="nombre">
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock %}

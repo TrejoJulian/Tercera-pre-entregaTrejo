@@ -1,0 +1,26 @@
+{% extends "AppVeterinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Profesionales con nombre que contenga: {{ nombre_buscado }}
+{% endblock %}
+
+{% block contenido %}
+
+<div class="card-deck">
+    {% for profesional in profesionales %}
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ profesional.nombre_completo }}</h5>
+          <p class="card-text">Fecha de nacimiento: {{ profesional.fecha_nacimiento }}</p>
+          <p class="card-text">Email: {{ profesional.email }}</p>
+          <p class="card-text">DNI: {{ profesional.dni }}</p>
+          <p class="card-text">Especialidad: {{ profesional.especialidad }}</p>
+        </div>
+    </div> 
+
+    {% endfor %}
+</div>
+
+{% endblock %}
